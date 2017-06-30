@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Murano.Appulate.Tests", "Murano.Appulate.Tests\Murano.Appulate.Tests.csproj", "{7C83B00B-991B-4A5A-95AE-F3DD2673816C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Murano.Appulate.HelpersForTests", "Murano.Appulate.HelpersForTests\Murano.Appulate.HelpersForTests.csproj", "{84768347-EFD4-45C2-BF31-25B5AEFEE351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Murano.Appulate.ConsoleAppForBugTrack", "Murano.Appulate.ConsoleAppForBugTrack\Murano.Appulate.ConsoleAppForBugTrack.csproj", "{83190C84-100A-464E-B1FC-60A0B28E01DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7C83B00B-991B-4A5A-95AE-F3DD2673816C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C83B00B-991B-4A5A-95AE-F3DD2673816C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C83B00B-991B-4A5A-95AE-F3DD2673816C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84768347-EFD4-45C2-BF31-25B5AEFEE351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84768347-EFD4-45C2-BF31-25B5AEFEE351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84768347-EFD4-45C2-BF31-25B5AEFEE351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84768347-EFD4-45C2-BF31-25B5AEFEE351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83190C84-100A-464E-B1FC-60A0B28E01DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83190C84-100A-464E-B1FC-60A0B28E01DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83190C84-100A-464E-B1FC-60A0B28E01DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83190C84-100A-464E-B1FC-60A0B28E01DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
