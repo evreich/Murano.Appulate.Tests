@@ -49,6 +49,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Murano.Appulate.HelpersForTests\Murano.Appulate.HelpersForTests.csproj">
+      <Project>{84768347-EFD4-45C2-BF31-25B5AEFEE351}</Project>
+      <Name>Murano.Appulate.HelpersForTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Murano.Appulate.Tests\Murano.Appulate.Tests.csproj">
+      <Project>{7C83B00B-991B-4A5A-95AE-F3DD2673816C}</Project>
+      <Name>Murano.Appulate.Tests</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

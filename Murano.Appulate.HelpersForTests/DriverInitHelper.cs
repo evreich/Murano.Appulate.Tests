@@ -13,8 +13,7 @@ namespace Murano.Appulate.HelpersForTests
     {
         public static IWebDriver CreateDriver(DriverTypes type)
         {
-            string pathToDrivers = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-                @"..\..\..\");
+            string pathToDrivers = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\");
             switch (type)
             {
                 case (DriverTypes.Chrome):
