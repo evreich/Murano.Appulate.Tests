@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using Murano.Appulate.HelpersForTests;
 using OpenQA.Selenium;
 
@@ -25,16 +26,9 @@ namespace Murano.Appulate.Tests
 
         public void LogInAccountOfInsurer()
         {
-            //Browsers remember sign in page after first enter and avoiding start page later.
-            try
-            {
+            //Browsers remember sign in page after first enter on start page and avoiding start page later.
+            if (_driver.Title.ToLower() != "sign in to appulate")
                 _driver.FindElement(By.CssSelector(SelectorOfSignInLink)).Click();
-            }
-            catch (NoSuchElementException)
-            {
-                if (_driver.Title.ToLower() != "sign in to appulate")
-                    throw new Exception();
-            }
 
             var credentials = DataHelper.GetAuthData(_pathToCredentials);
             _signinPage = new SignInPage(_driver);
@@ -44,6 +38,7 @@ namespace Murano.Appulate.Tests
         public void ExpandListOfAppAndPolicies()
         {
             _driver.FindElement(By.CssSelector(SelectorOfExpandListLink)).Click();
+            Thread.Sleep(2000);
         }
 
         public void ClickOnLinkToOpenWorkersCompensationApp()

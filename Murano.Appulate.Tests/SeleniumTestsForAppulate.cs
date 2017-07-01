@@ -11,26 +11,25 @@ namespace Murano.Appulate.Tests
     public class SeleniumTestsForAppulate
     {
         private readonly IWebDriver _driver;
-        private MainSteps _mainSteps;
-        private UploadImageSteps _uploadImageSteps;
-        private FillingNameSteps _fillingNameSteps;
+        private readonly MainSteps _mainSteps;
+        private readonly UploadImageSteps _uploadImageSteps;
+        private readonly FillingNameSteps _fillingNameSteps;
         private const string SiteUrl = "https://appulatebeta.com/";
 
         public SeleniumTestsForAppulate(DriverTypes type)
         {
             _driver = DriverInitHelper.CreateDriver(type);
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            _driver.Manage().Window.Maximize();
+            _mainSteps = new MainSteps(_driver);
+            _uploadImageSteps = new UploadImageSteps(_driver);
+            _fillingNameSteps = new FillingNameSteps(_driver);
         }
 
         [SetUp]
         public void Init()
         {
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            _driver.Manage().Window.Maximize();
             _driver.Url = SiteUrl;
-
-            _mainSteps = new MainSteps(_driver);
-            _uploadImageSteps = new UploadImageSteps(_driver);
-            _fillingNameSteps = new FillingNameSteps(_driver);
         }
 
         [Test]

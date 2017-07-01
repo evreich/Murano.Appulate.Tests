@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
@@ -13,8 +12,8 @@ namespace Murano.Appulate.Tests
         private readonly Actions _actions;
         private readonly WebDriverWait _waitDriver;
 
-        private const string pictureName = "beach.jpg";
-        private readonly string _pathToPicture = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\"+pictureName));
+        private const string PictureName = "beach.jpg";
+        private readonly string _pathToPicture = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\"+ PictureName));
         private const string SelectorOfSectionElement = "div[class=\"section-item\"]";
         private const string SelectorOfAdditionalInformationLink = "div[class=\"rc-tooltip-inner\"] li:last-child > a";
         private const string SelectorOfUploadFileInput = "div[class=\"upload-container\"] input";
@@ -51,7 +50,7 @@ namespace Murano.Appulate.Tests
             {
                 return false;
             }
-            return _driver.FindElement(By.CssSelector(SelectorOfAddedImage)).Text==pictureName;
+            return _driver.FindElement(By.CssSelector(SelectorOfAddedImage)).Text== PictureName;
         }
     }
 }
