@@ -36,8 +36,8 @@ namespace Murano.Appulate.Tests
         public void UploadImageInAdditionalInformation()
         {
             _mainSteps.LogInAccountOfInsurer();
-            _mainSteps.ExpandListOfAppAndPolicies();
             Assert.AreEqual("krol appulate testing agency", _mainSteps.GetNameOfProviderCompany().ToLower());
+            _mainSteps.ExpandListOfAppAndPolicies();
             Assert.IsTrue(_mainSteps.GetTitleOfNeededApp().ToLower().Contains("workers' compensation"));
             _mainSteps.ClickOnLinkToOpenWorkersCompensationApp();
             _uploadImageSteps.OpenAdditionalInformationOfApp();
@@ -49,8 +49,8 @@ namespace Murano.Appulate.Tests
         public void FillingInsureNameInApp()
         {
             _mainSteps.LogInAccountOfInsurer();
-            _mainSteps.ExpandListOfAppAndPolicies();
             Assert.AreEqual("krol appulate testing agency", _mainSteps.GetNameOfProviderCompany().ToLower());
+            _mainSteps.ExpandListOfAppAndPolicies();
             Assert.IsTrue(_mainSteps.GetTitleOfNeededApp().ToLower().Contains("workers' compensation"));
             _mainSteps.ClickOnLinkToOpenWorkersCompensationApp();
             _fillingNameSteps.FillNameTextbox();

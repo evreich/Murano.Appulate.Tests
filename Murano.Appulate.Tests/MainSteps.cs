@@ -24,12 +24,16 @@ namespace Murano.Appulate.Tests
             _driver = driver;
         }
 
-        public void LogInAccountOfInsurer()
+        private void RedirectOnSighInPage()
         {
             //Browsers remember sign in page after first enter on start page and avoiding start page later.
             if (_driver.Title.ToLower() != "sign in to appulate")
                 _driver.FindElement(By.CssSelector(SelectorOfSignInLink)).Click();
+        }
 
+        public void LogInAccountOfInsurer()
+        {
+            RedirectOnSighInPage();
             var credentials = DataHelper.GetAuthData(_pathToCredentials);
             _signinPage = new SignInPage(_driver);
             _signinPage.LogInAccount(credentials[0], credentials[1]);
